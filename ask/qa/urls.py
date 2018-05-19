@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url
 from qa.views import test
 
-urlpatterns = [
+urlpatterns = [ url (r'^$',test),
 url(r'^login/.*', test, name='login'),
 url(r'^signup/.*', test, name='signup'),
 url(r'^question/(\d+)/', test, name='question'),
