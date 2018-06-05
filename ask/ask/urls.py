@@ -20,9 +20,10 @@ Including another URLconf
 ##    path('admin/', admin.site.urls),url(r'^',include('qa.urls'))]
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.urls import path
 admin.autodiscover()
 
-urlpatterns = [  
+urlpatterns = [path('admin/', admin.site.urls),
     url(r'^', include('qa.urls')),
     url(r'^login/.*', include('qa.urls')),
     url(r'^signup/.*', include('qa.urls')),
